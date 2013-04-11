@@ -39,10 +39,27 @@ Engine needs to take in a .js file defining an object with the following propert
 * imageSrc : interface for graphics
     * type: image, canvas - for support of dynamic content.
     * urls
+* gameevent: these are the pre-defined story events ( scene and gameobject state changes triggered by player actions )
+    * name of this event
+    * array of scenes and the new states to set them to
+    * array of gameobjects and their new states
+* verbs : these are the actions for the game (walk, look at, pick up, use, talk)<open, close?>
+    * a 'verb' is a named script reference, which is passed one(default player) or two references to gameobject(s)
+* gameobjects: superclass for actors, player and props
+    * methods
+        * initAnimationsFromFileResource : load this objects animations 
+        * initVerbResponsesFromFileResource : load this object's interactions
+        * setverbresponse( verb, response ) : 
+        * respond(verb,gameobject) : respond to an interaction
+    * properties
+        * name : name for this object (eg door)
+        * pos : box
 * scenes: array of scenes objects.
     * scenes:
         * imageSrc
         * colSrc : the collision image URL (a-la sierra style adventures).
+        * gameobjects:
+            * the actors and props visible in this scene
         * camera:
             * pos:
             * lookAt:
@@ -52,16 +69,9 @@ Engine needs to take in a .js file defining an object with the following propert
             * n:
         * portals: array of portals to other scenes
             * portal:
-                * to scenes
-* stageConnections: array of stageConnection objects
-    * stageConnection:
-        * name: id string
-        * fromStage:
-            * stage: stage name
-            * portalInd: portal index
+* portal: sceneConnection objects
         * toStage:
             * stage: stage name
-            * portalInd: portal index
         * active: is it open?
 * actionResponse:
     * name: id string
@@ -77,29 +87,10 @@ Engine needs to take in a .js file defining an object with the following propert
                 * text:
                 * conversationName: (optional, if empty go to root.)
                 * event: (optional)
-* props:
-    * prop:
-        * imageSrc : 
-        * operation area : box in which character must stand to interact with prop
-        * actionResponse
-* characters:
-    * character:
-        * imageSrc :
-        * actionResponse
 * audioResources:
     * background music : pointer to mp3/ogg of music ( we will need to produce both formats for windows phone and xbox support)  
-* actions: An action is a verb ("look at","attack","eat","combine"). These will appear somewhere in the UI - either as a list of buttons, or in a context-click menu.
-    * action:
-        * name: id string
-        * event: (optional)
 * scripts: array of script URLs, loaded as modules.
-* events: array of custom events. 
-    * event: An Event is basically just a named entity.
-        * name: id string
-* eventHandlers:
-    * eventHandler: 
-        * name: id string
-        * script: script scope will include access to engine globals. can reconfigure conversation tree, or make a story event or whatever.
+
 
 A simple forms-based tool should be written to produce this structure, essecially making it the game editing tool.
 
