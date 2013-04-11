@@ -45,6 +45,7 @@ Engine needs to take in a .js file defining an object with the following propert
     * array of gameobjects and their new states
 * verbs : these are the actions for the game (walk, look at, pick up, use, talk)<open, close?>
     * a 'verb' is a named script reference, which is passed one(default player) or two references to gameobject(s)
+        * other sugested predefines (alert,say{speech bubble}, choice{options})
 * gameobjects: superclass for actors, player and props
     * methods
         * initAnimationsFromFileResource : load this objects animations 
