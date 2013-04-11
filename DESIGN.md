@@ -39,8 +39,8 @@ Engine needs to take in a .js file defining an object with the following propert
 * imageSrc : interface for graphics
     * type: image, canvas - for support of dynamic content.
     * urls
-* stages: array of stage objects.
-    * stage:
+* scenes: array of scenes objects.
+    * scenes:
         * imageSrc
         * colSrc : the collision image URL (a-la sierra style adventures).
         * camera:
@@ -50,9 +50,9 @@ Engine needs to take in a .js file defining an object with the following propert
         * plane: for now, later can be replaced with more complex geometry.
             * pos:
             * n:
-        * portals: array of portals to other stages
+        * portals: array of portals to other scenes
             * portal:
-                * top,left,bottom,right
+                * to scenes
 * stageConnections: array of stageConnection objects
     * stageConnection:
         * name: id string
