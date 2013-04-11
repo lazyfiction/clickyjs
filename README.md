@@ -6,9 +6,6 @@ Hopes to one day be an experimental HTML5 point-and-click adventure game engine.
 
 Project just started up, so nothing implemented yet, please come back later.
 
-Example:
-<div id="mainStage"/>
-
 Techs Used:
 KineticJS http://kineticjs.com/
 
