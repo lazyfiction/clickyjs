@@ -15,7 +15,8 @@
             'jquery'],
             kinetic: [//'http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.0.min.js',
             //If the CDN location fails, load from this location
-            'kinetic']
+            'kinetic'],
+            pathfinding: ['https://raw.github.com/qiao/PathFinding.js/master/lib/pathfinding-browser.min.js','pathfinding-browser.min']
         }
     });
 
