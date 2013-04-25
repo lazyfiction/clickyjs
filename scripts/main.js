@@ -10,13 +10,13 @@
         //the paths config could be for a directory.
         paths: {
             app: '../clickyjs/clicky',
-            jquery: ['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min',
+            jquery: ['//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min',
             //If the CDN location fails, load from this location
             'jquery'],
-            kinetic: [//'http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.0.min.js',
+            kinetic: ['//cdnjs.cloudflare.com/ajax/libs/kineticjs/4.3.1/kinetic.min',
             //If the CDN location fails, load from this location
             'kinetic'],
-            pathfinding: [//'https://raw.github.com/qiao/PathFinding.js/master/lib/pathfinding-browser.min.js'
+            pathfinding: ['//raw.github.com/qiao/PathFinding.js/master/lib/pathfinding-browser.min'
             //If the CDN location fails, load from this location
             ,'pathfinding-browser.min']
         }
