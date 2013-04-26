@@ -13,7 +13,7 @@
             jquery: ['//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min',
             //If the CDN location fails, load from this location
             'jquery'],
-            kinetic: ['//cdnjs.cloudflare.com/ajax/libs/kineticjs/4.3.1/kinetic.min',
+            kinetic: ['//d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.4.3.min',
             //If the CDN location fails, load from this location
             'kinetic'],
             pathfinding: ['//raw.github.com/qiao/PathFinding.js/master/lib/pathfinding-browser.min'
